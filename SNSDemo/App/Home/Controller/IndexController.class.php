@@ -70,7 +70,7 @@ class IndexController extends Controller{
         
         $this->display('user_list');
     }
-    
+    /**用户编辑 插入详细的信息**/
     public function edit(){
         $user_id = session(user_id);
         $this->checkUser($user_id);
@@ -78,6 +78,7 @@ class IndexController extends Controller{
         $data = $_POST;
 //        var_dump($data);
         if(!empty($data)){
+            //create($data,2)自动过滤，2是在更新的时候调用
             if($User->create($data,2)){
                 $User->user_hoby = join('-', $data[user_hoby]);
                 $User->where("user_id=$user_id")->save();
@@ -88,7 +89,11 @@ class IndexController extends Controller{
         $this->assign('user',$user_one);
         $this->display('edit');
     }
-    
+    /**个人页面显示**/
+    public function person(){
+        $this->display('person');
+    }
+    /**登出系统，清理session**/
     public function logout(){
         session(user_id,null);
         $this->redirect('login');
