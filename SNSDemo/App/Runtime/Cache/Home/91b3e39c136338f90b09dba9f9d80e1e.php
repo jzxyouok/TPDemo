@@ -204,17 +204,21 @@
                         </div>
                                 
                             <div class="block-content collapse in"> 
-                            <?php if(is_array($rs)): $i = 0; $__LIST__ = $rs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="row-fluid padd-bottom">
-                                    <div class="span12">
-                                            <h5><?php echo ($vo["comment_title"]); ?></h5>
-                                            <div><?php echo ($vo["comment_content"]); ?></div>
-                                            <a href="/?user_id=<?php echo ($vo["user_id"]); ?>">
-                                                <div class="pull-right"><?php echo ($vo["user_name"]); ?>
-                                                </div>
-                                            </a>
-                                        <hr>
+                            <?php if(is_array($rs)): $i = 0; $__LIST__ = $rs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["user_id"] == $user[user_id]): ?><div>
+                                        
                                     </div>
-                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <?php else: ?>
+                                    <div class="row-fluid padd-bottom">
+                                        <div class="span12">
+                                                <h5><?php echo ($vo["comment_title"]); ?></h5>
+                                                <div><?php echo ($vo["comment_content"]); ?></div>
+                                                <a href="/?user_id=<?php echo ($vo["user_id"]); ?>">
+                                                    <div class="pull-right"><?php echo ($vo["user_name"]); ?>
+                                                    </div>
+                                                </a>
+                                            <hr>
+                                        </div>
+                                    </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                             </div>
                         </div>
                         <!-- /block -->

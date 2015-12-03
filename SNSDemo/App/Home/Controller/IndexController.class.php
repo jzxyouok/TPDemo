@@ -52,16 +52,16 @@ class IndexController extends Controller{
 //        echo $user_id;
         $this->checkUser($user_id);
         $User = D('User');
-//        $Comment = D('Comment');
+        $Comment = D('Comment');
         //查询别人给当前账号写的留言
 //        $rs_comment = $Comment->where("comment_from=$user_id")->select();
 //        $this->assign('comment',$rs_comment);
         //查询当前用户信息
         $rs_user = $User->where("user_id=$user_id")->find();
         $this->assign('user',$rs_user);
-
+//        var_dump($rs_user);
         //关联查询 留言者用户信息
-        $rs = $User->join('sns_comment on sns_user.user_id=sns_comment.user_id','LEFT')->select();
+        $rs = $Comment->join('sns_user on sns_comment.user_id=sns_user.user_id')->select();
         $this->assign("rs", $rs);
         var_dump($rs);
         $this->display('index');

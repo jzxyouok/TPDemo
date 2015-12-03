@@ -207,17 +207,25 @@
                                 
                             <div class="block-content collapse in"> 
                             <volist name="rs" id="vo">
-                                <div class="row-fluid padd-bottom">
-                                    <div class="span12">
-                                            <h5>{$vo.comment_title}</h5>
-                                            <div>{$vo.comment_content}</div>
-                                            <a href="/?user_id={$vo.user_id}">
-                                                <div class="pull-right">{$vo.user_name}
-                                                </div>
-                                            </a>
-                                        <hr>
+                                
+                                <if condition='$vo.user_id eq $user[user_id]'>
+                                    
+                                    <div>
+                                        
                                     </div>
-                                </div>
+                                <else/>
+                                    <div class="row-fluid padd-bottom">
+                                        <div class="span12">
+                                                <h5>{$vo.comment_title}</h5>
+                                                <div>{$vo.comment_content}</div>
+                                                <a href="/?user_id={$vo.user_id}">
+                                                    <div class="pull-right">{$vo.user_name}
+                                                    </div>
+                                                </a>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </if>
                             </volist>
                             </div>
                         </div>
