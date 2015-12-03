@@ -185,9 +185,10 @@
 					<div class="alert alert-success">
 						<button class="close" type="button" data-dismiss='alert'>&times;</button>
                                                 <h4>登录成功</h4><?php echo ($user["user_name"]); ?>&nbsp;&nbsp;欢迎光临
-                                                <div>请尽快
+                                                <?php if($user["user_name"] == null): ?><div>请尽快
                                                      <a href="edit" class="button">编辑</a>个人信息
-                                                </div>
+                                                </div><?php endif; ?>
+                                                        
                                                
 					</div>
 
@@ -203,16 +204,17 @@
                         </div>
                                 
                             <div class="block-content collapse in"> 
-                            <?php if(is_array($comment)): foreach($comment as $key=>$comment): ?><div class="row-fluid padd-bottom">
+                            <?php if(is_array($rs)): $i = 0; $__LIST__ = $rs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="row-fluid padd-bottom">
                                     <div class="span12">
-                                            <h5><?php echo ($comment["comment_title"]); ?></h5>
-                                            <div><?php echo ($comment["comment_content"]); ?></div>
-                                            <a href="#">
-                                                <div class="pull-right">name</div>
+                                            <h5><?php echo ($vo["comment_title"]); ?></h5>
+                                            <div><?php echo ($vo["comment_content"]); ?></div>
+                                            <a href="/?comment_to=<?php echo ($comment["comment_to"]); ?>">
+                                                <div class="pull-right"><?php echo ($vo["user_name"]); ?>
+                                                </div>
                                             </a>
                                         <hr>
                                     </div>
-                                </div><?php endforeach; endif; ?>
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
                             </div>
                         </div>
                         <!-- /block -->

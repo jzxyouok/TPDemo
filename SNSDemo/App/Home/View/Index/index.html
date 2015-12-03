@@ -185,9 +185,12 @@
 					<div class="alert alert-success">
 						<button class="close" type="button" data-dismiss='alert'>&times;</button>
                                                 <h4>登录成功</h4>{$user.user_name}&nbsp;&nbsp;欢迎光临
+                                                <if condition="$user.user_name eq null">
                                                 <div>请尽快
                                                      <a href="edit" class="button">编辑</a>个人信息
                                                 </div>
+                                                </if>
+                                                        
                                                
 					</div>
 
@@ -203,18 +206,19 @@
                         </div>
                                 
                             <div class="block-content collapse in"> 
-                            <foreach name="comment" item="comment">
+                            <volist name="rs" id="vo">
                                 <div class="row-fluid padd-bottom">
                                     <div class="span12">
-                                            <h5>{$comment.comment_title}</h5>
-                                            <div>{$comment.comment_content}</div>
-                                            <a href="#">
-                                                <div class="pull-right">name</div>
+                                            <h5>{$vo.comment_title}</h5>
+                                            <div>{$vo.comment_content}</div>
+                                            <a href="/?comment_to={$comment.comment_to}">
+                                                <div class="pull-right">{$vo.user_name}
+                                                </div>
                                             </a>
                                         <hr>
                                     </div>
                                 </div>
-                            </foreach>
+                            </volist>
                             </div>
                         </div>
                         <!-- /block -->

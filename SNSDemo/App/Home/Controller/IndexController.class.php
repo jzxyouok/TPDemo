@@ -52,13 +52,18 @@ class IndexController extends Controller{
 //        echo $user_id;
         $this->checkUser($user_id);
         $User = D('User');
-        $Comment = D('Comment');
-        $rs_comment = $Comment->select();
+//        $Comment = D('Comment');
+        //查询别人给当前账号写的留言
+//        $rs_comment = $Comment->where("comment_from=$user_id")->select();
+//        $this->assign('comment',$rs_comment);
+        //查询当前用户信息
         $rs_user = $User->where("user_id=$user_id")->find();
         $this->assign('user',$rs_user);
-        $this->assign('comment',$rs_comment);
-//        $this->assign('user',$user_id);
-//        log($user_id);
+
+        //关联查询 留言者用户信息
+        $rs = $User->join('sns_comment on sns_user.user_id=sns_comment.user_id')->select();
+        $this->assign("rs", $rs);
+//        var_dump($rs);
         $this->display('index');
     }
     public function userList(){
@@ -105,8 +110,15 @@ class IndexController extends Controller{
         }
     }
     public function checkUser($user_id){
-        if(empty($user_id)){
+        if($user_id == NULL){
             $this->redirect("login");
         }
     }
+    /**将二维数组转换为一维数组**/
+//    public function chengeArray($data,$name){
+//        foreach ($data as $key => $value) {
+//            $tmp[$key] = $value[$name];
+//        }
+//        return $tmp;
+//    }
 }
