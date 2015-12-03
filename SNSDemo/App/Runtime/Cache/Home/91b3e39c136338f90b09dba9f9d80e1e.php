@@ -208,7 +208,7 @@
                                     <div class="span12">
                                             <h5><?php echo ($vo["comment_title"]); ?></h5>
                                             <div><?php echo ($vo["comment_content"]); ?></div>
-                                            <a href="/?comment_to=<?php echo ($comment["comment_to"]); ?>">
+                                            <a href="/?user_id=<?php echo ($vo["user_id"]); ?>">
                                                 <div class="pull-right"><?php echo ($vo["user_name"]); ?>
                                                 </div>
                                             </a>

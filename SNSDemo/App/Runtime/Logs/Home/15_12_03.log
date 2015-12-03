@@ -704,3 +704,405 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001004s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001286s ]
 
+[ 2015-12-03T16:57:43+08:00 ] 127.0.0.1 /?comment_to=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002876s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8] Undefined variable: comment D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Runtime\Cache\Home\91b3e39c136338f90b09dba9f9d80e1e.php 第 211 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018752s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001254s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001749s ]
+
+[ 2015-12-03T16:59:01+08:00 ] 127.0.0.1 /?comment_to=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002434s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001461s ]
+
+[ 2015-12-03T16:59:05+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003098s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0364s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001491s ]
+
+[ 2015-12-03T16:59:08+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002217s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015412s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001185s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001514s ]
+
+[ 2015-12-03T16:59:15+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002335s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001525s ]
+
+[ 2015-12-03T16:59:19+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002334s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001467s ]
+
+[ 2015-12-03T16:59:20+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002232s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001575s ]
+
+[ 2015-12-03T16:59:21+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002330s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016267s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001501s ]
+
+[ 2015-12-03T16:59:40+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002118s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000603s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016572s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001369s ]
+
+[ 2015-12-03T16:59:49+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002578s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001278s ]
+
+[ 2015-12-03T16:59:50+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002384s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001922s ]
+
+[ 2015-12-03T16:59:51+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002260s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000396s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001436s ]
+
+[ 2015-12-03T16:59:52+08:00 ] 127.0.0.1 /?user_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002264s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000526s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001648s ]
+
+[ 2015-12-03T16:59:58+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001304s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003800s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015689s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001008s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2015-12-03T17:00:04+08:00 ] 127.0.0.1 /index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002810s ]
+NOTIC: [8] Undefined index: user_email D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 13 行.
+NOTIC: [8] Undefined index: user_password D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_email='' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_password='d41d8cd98f00b204e9800998ecf8427e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000981s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001456s ]
+
+[ 2015-12-03T17:00:07+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002219s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' D:\DownloadProgram\PHP\wamp\www\TPDemo\SNSDemo\App\Home\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `sns_user` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `sns_user` WHERE ( user_id=464768 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sns_user` INNER JOIN sns_comment on sns_user.user_id=sns_comment.user_id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001968s ]
+
