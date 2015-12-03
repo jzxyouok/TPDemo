@@ -61,9 +61,9 @@ class IndexController extends Controller{
         $this->assign('user',$rs_user);
 
         //关联查询 留言者用户信息
-        $rs = $User->join('sns_comment on sns_user.user_id=sns_comment.user_id')->select();
+        $rs = $User->join('sns_comment on sns_user.user_id=sns_comment.user_id','LEFT')->select();
         $this->assign("rs", $rs);
-//        var_dump($rs);
+        var_dump($rs);
         $this->display('index');
     }
     public function userList(){
