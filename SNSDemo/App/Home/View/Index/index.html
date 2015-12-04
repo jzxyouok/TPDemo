@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class='no-js'>
 <head>
-	<title>Home page</title>
-	<meta charset='utf-8'>
-	<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <title>Home page</title>
+    <meta charset='utf-8'>
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="__PUBLIC__/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link href="__PUBLIC__/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
     <link href="__PUBLIC__/assets/styles.css" rel="stylesheet" media="screen">
@@ -208,12 +208,7 @@
                             <div class="block-content collapse in"> 
                             <volist name="rs" id="vo">
                                 
-                                <if condition='$vo.user_id eq $user[user_id]'>
-                                    
-                                    <div>
-                                        
-                                    </div>
-                                <else/>
+                                <if condition='$vo.comment_from eq $use[ruser_id]'>
                                     <div class="row-fluid padd-bottom">
                                         <div class="span12">
                                                 <h5>{$vo.comment_title}</h5>

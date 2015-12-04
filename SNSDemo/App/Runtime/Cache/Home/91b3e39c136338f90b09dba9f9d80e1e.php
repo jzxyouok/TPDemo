@@ -1,9 +1,9 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html class='no-js'>
 <head>
-	<title>Home page</title>
-	<meta charset='utf-8'>
-	<link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <title>Home page</title>
+    <meta charset='utf-8'>
+    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/Public/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link href="/Public/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
     <link href="/Public/assets/styles.css" rel="stylesheet" media="screen">
@@ -204,11 +204,7 @@
                         </div>
                                 
                             <div class="block-content collapse in"> 
-                            <?php if(is_array($rs)): $i = 0; $__LIST__ = $rs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["user_id"] == $user[user_id]): ?><div>
-                                        
-                                    </div>
-                                <?php else: ?>
-                                    <div class="row-fluid padd-bottom">
+                            <?php if(is_array($rs)): $i = 0; $__LIST__ = $rs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["comment_from"] == $user[user_id]): ?><div class="row-fluid padd-bottom">
                                         <div class="span12">
                                                 <h5><?php echo ($vo["comment_title"]); ?></h5>
                                                 <div><?php echo ($vo["comment_content"]); ?></div>
