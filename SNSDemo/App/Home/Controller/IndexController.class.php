@@ -63,7 +63,7 @@ class IndexController extends Controller{
         //关联查询 留言者用户信息
         $rs = $Comment->join('sns_user on sns_comment.user_id=sns_user.user_id')->select();
         $this->assign("rs", $rs);
-        var_dump($rs);
+//        var_dump($rs);
         $this->display('index');
     }
     public function userList(){
@@ -89,8 +89,22 @@ class IndexController extends Controller{
         $this->assign('user',$user_one);
         $this->display('edit');
     }
+    
     /**个人页面显示**/
     public function person(){
+        $user_id = I("get.user_id");
+//        echo $user_id;
+        $User = D('User');
+        $Comment = D('Comment');
+        $data = $_POST;
+        $rs_user = $this->findUser($User, $user_id);
+//        var_dump($rs);
+        $this->assign("user", $rs_user);
+        
+        $this->addData($Comment, $data,$user_id,1, 'comment_id');
+        
+        $this->showMessage($Comment, "rs");
+//        var_dump($rs);
         $this->display('person');
     }
     /**登出系统，清理session**/
@@ -119,6 +133,33 @@ class IndexController extends Controller{
             $this->redirect("login");
         }
     }
+    /**根据用户id查找用户资料**/
+    public function findUser($model,$user_id){
+        return $model->where("user_id=$user_id")->find();
+    }
+    /**关联查找留言和用户表,实现留言显示功能**/
+    public function showMessage($commentModel,$assignName){
+        $rs = $commentModel->join("sns_user on sns_comment.user_id=sns_user.user_id")->select();
+        $this->assign($assignName, $rs);
+        return $rs;
+    }
+    /**添加数据到表里面**/
+    public function addData($model,$data,$user_id,$flag=1,$id=2){
+        if(!empty($data)){
+            if(session(user_id) != $user_id){
+                $model->create($data,$flag);
+                $model->$id = md5(time().mt_rand(3, 1000000));
+                $model->add();
+                return TRUE;
+                }else {
+                    echo "<script>alert('您不能给自己留言哦！')</script>";
+                    return FALSE;
+                }
+        }    else {
+            return FALSE;
+        }
+    }
+
     /**将二维数组转换为一维数组**/
 //    public function chengeArray($data,$name){
 //        foreach ($data as $key => $value) {

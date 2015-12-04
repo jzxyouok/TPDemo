@@ -26,14 +26,14 @@
                             <div class="nav-collapse collapse">
                                     <ul class="nav pull-right">
         <li class="dropdown">
-          <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> 昵称<i class="caret"></i></a>
+          <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> <?php echo ($user["user_nickname"]); ?><i class="caret"></i></a>
           <ul class="dropdown-menu">
             <li>
                 <a tabindex="-1" href="#">简介</a>
             </li>
             <li class="divider"></li>
             <li>
-                <a tabindex="-1" href="login.html">登出</a>
+                <a tabindex="-1" href="logout">登出</a>
             </li>
           </ul>
         </li>
@@ -105,7 +105,7 @@
                             <div class="row-fluid">
                                     <div class="alert alert-success">
                                             <button class="close" type="button" data-dismiss='alert'>&times;</button>
-                                            <h4>欢迎光临name的小屋</h4>
+                                            <h4>欢迎光临&nbsp;&nbsp;<?php echo ($user["user_name"]); ?>&nbsp;&nbsp;的小屋</h4>
                                     </div>
                             </div>
                             <!--row-fluid-->
@@ -119,36 +119,16 @@
                                                     <div class="pull-right"><span class='badge badge-warning'>12</span></div>
                                             </div>
                                             <div class="block-content collapse in">
-                                                    <div class="row-fluid padd-botttom">
+                                                <?php if(is_array($rs)): $i = 0; $__LIST__ = $rs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["comment_from"] == $user[user_id]): ?><div class="row-fluid padd-botttom">
                                                             <div class="span12">
-                                                                    <h5>title</h5>
-                                                                    <div>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</div>
-                                                                    <a href="#">
-                                                                            <div class="pull-right">name</div>
+                                                                    <h5><?php echo ($vo["comment_title"]); ?></h5>
+                                                                    <div><?php echo ($vo["comment_content"]); ?></div>
+                                                                    <a href="person?user_id=<?php echo ($vo["user_id"]); ?>">
+                                                                            <div class="pull-right"><?php echo ($vo["user_name"]); ?></div>
                                                                     </a>
                                                                     <hr>
                                                             </div>
-                                                    </div>
-                                                    <div class="row-fluid padd-botttom">
-                                                            <div class="span12">
-                                                                    <h5>title</h5>
-                                                                    <div>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</div>
-                                                                    <a href="#">
-                                                                            <div class="pull-right">name</div>
-                                                                    </a>
-                                                                    <hr>
-                                                            </div>
-                                                    </div>
-                                                    <div class="row-fluid padd-botttom">
-                                                            <div class="span12">
-                                                                    <h5>title</h5>
-                                                                    <div>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</div>
-                                                                    <a href="#">
-                                                                            <div class="pull-right">name</div>
-                                                                    </a>
-                                                                    <hr>
-                                                            </div>
-                                                    </div>
+                                                    </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                                             </div>
                                     </div>
                                     <!--block-->
@@ -163,12 +143,13 @@
                                                     <div class="muted pull-left">留言板</div>
                                             </div>
                                             <div class="block-content collapse in">
-                                            <form>
-                                                    <span>Title</span><input type="text" placeholder='title'>
-                                                    <textarea id="bootstrap-editor" placeholder='enter your message...' style="width:98%; height:100px"></textarea>
-                                                    <input type="submit" class="btn btn-primary" value="提交">
+                                                <form method="POST">
+                                                <input type="hidden" value="<?php echo (session('user_id')); ?>" name="user_id">
+                                                <input type="hidden" value="<?php echo ($user["user_id"]); ?>" name="comment_from">
+                                                <span>Title</span><input type="text" placeholder='title' name="comment_title">
+                                                <textarea id="bootstrap-editor" placeholder='enter your message...' style="width:98%; height:100px" name="comment_content"></textarea>
+                                                <input type="submit" class="btn btn-primary" value="提交">
                                             </form>
-
                                             </div>
                                     </div>
                                     <!--block-->
@@ -178,61 +159,7 @@
                     <!--span12-->	
             </div>
     </div>
-	<!--/.fluid-container-->
-        <script src="/Public/vendors/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
-        <script src="/Public/vendors/jquery-1.9.1.min.js"></script>
-        <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
-		<script src="/Public/vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
-
-		<script src="/Public/vendors/ckeditor/ckeditor.js"></script>
-		<script src="/Public/vendors/ckeditor/adapters/jquery.js"></script>
-
-		<script type="text/javascript" src="/Public/vendors/tinymce/js/tinymce/tinymce.min.js"></script>
-
-        <script src="/Public/assets/scripts.js"></script>
-        <script>
-        $(function() {
-            // Bootstrap
-            $('#bootstrap-editor').wysihtml5();
-
-            // Ckeditor standard
-            $( 'textarea#ckeditor_standard' ).ckeditor({width:'98%', height: '150px', toolbar: [
-				{ name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
-				[ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],			// Defines toolbar group without name.
-				{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
-			]});
-            $( 'textarea#ckeditor_full' ).ckeditor({width:'98%', height: '150px'});
-        });
-
-        // Tiny MCE
-        tinymce.init({
-		    selector: "#tinymce_basic",
-		    plugins: [
-		        "advlist autolink lists link image charmap print preview anchor",
-		        "searchreplace visualblocks code fullscreen",
-		        "insertdatetime media table contextmenu paste"
-		    ],
-		    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-		});
-
-		// Tiny MCE
-        tinymce.init({
-		    selector: "#tinymce_full",
-		    plugins: [
-		        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-		        "searchreplace wordcount visualblocks visualchars code fullscreen",
-		        "insertdatetime media nonbreaking save table contextmenu directionality",
-		        "emoticons template paste textcolor"
-		    ],
-		    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-		    toolbar2: "print preview media | forecolor backcolor emoticons",
-		    image_advtab: true,
-		    templates: [
-		        {title: 'Test template 1', content: 'Test 1'},
-		        {title: 'Test template 2', content: 'Test 2'}
-		    ]
-		});
-
-        </script>
+	
+      
 </body>
 </html>

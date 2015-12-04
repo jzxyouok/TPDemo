@@ -208,12 +208,12 @@
                             <div class="block-content collapse in"> 
                             <volist name="rs" id="vo">
                                 
-                                <if condition='$vo.comment_from eq $use[ruser_id]'>
+                                <if condition='$vo.comment_from eq $user[user_id]'>
                                     <div class="row-fluid padd-bottom">
                                         <div class="span12">
                                                 <h5>{$vo.comment_title}</h5>
                                                 <div>{$vo.comment_content}</div>
-                                                <a href="/?user_id={$vo.user_id}">
+                                                <a href="person?user_id={$vo.user_id}">
                                                     <div class="pull-right">{$vo.user_name}
                                                     </div>
                                                 </a>
